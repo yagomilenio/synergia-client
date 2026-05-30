@@ -1,0 +1,9 @@
+certifi
+cryptography
+idna
+psutil
+PyJWT
+requests
+tabulate
+urllib3
+websockets

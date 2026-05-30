@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+client/__init__.py
+client/client.py
+client/config.py
+synergia.egg-info/PKG-INFO
+synergia.egg-info/SOURCES.txt
+synergia.egg-info/dependency_links.txt
+synergia.egg-info/entry_points.txt
+synergia.egg-info/requires.txt
+synergia.egg-info/top_level.txt
+worker/__init__.py
+worker/docker_util.py
+worker/upload_results.py
+worker/worker.py
+worker/utils/configuration_interpreter.py
+worker/utils/github_util.py

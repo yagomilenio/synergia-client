@@ -1,0 +1,7 @@
+https://github.com/yagomilenio/testRepositoryForParallel
+https://github.com/yagomilenio/foldingathomesynergia
+https://github.com/yagomilenio/qwen2-vl-7b-parallel-test
+https://github.com/yagomilenio/ollama-llm-task
+https://github.com/yagomilenio/blender-render-task
+https://github.com/yagomilenio/yescrypt_task_cracker
+

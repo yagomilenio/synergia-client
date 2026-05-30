@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]    
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synergia"
+version = "0.1.0"
+description = "Distributed compute node CLI"
+requires-python = ">=3.10"
+dependencies = [
+    "certifi",
+    "cryptography",
+    "idna",
+    "psutil",
+    "PyJWT",
+    "requests",
+    "tabulate",
+    "urllib3",
+    "websockets",
+]
+
+[project.scripts]
+synergia = "client.client:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["client*", "worker*"]

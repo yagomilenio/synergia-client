@@ -1,0 +1,2 @@
+[console_scripts]
+synergia = client.client:main
