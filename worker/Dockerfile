@@ -29,7 +29,6 @@ RUN touch /home/net_user/external_deps.log && \
 COPY container/upload_results.py /scripts/upload_results.py
 COPY container/hash_util.py /scripts/hash_util.py
 COPY container/iptables.sh /scripts/iptables.sh
-COPY container/config.ini /scripts/config.ini
 
 RUN chmod +x /scripts/iptables.sh
 

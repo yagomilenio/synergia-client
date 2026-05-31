@@ -91,15 +91,24 @@ def save_device_config(cpu_threads=None, gpu_device=None, ram=None):
     else: 
         data["cpu_threads"] = os.cpu_count() or 1
     if gpu_device is not None:
-        data["gpu_device"] = gpu_device
-    else: 
+        if gpu_device in (None, "none", "None", "-1", "Null", "null"):
+            data["gpu_device"] = None
+        else:
+            data["gpu_device"] = gpu_device
+    else:
         data["gpu_device"] = gpu_identifiers[0] if gpus else None
     if ram is not None:
         data["ram"] = ram
     else:
         data["ram"] = f"{total_ram}" #devuelve ram total en MB
 
-    if int(data["cpu_threads"]) > os.cpu_count() or int(data["cpu_threads"]) <= 0 or int(data["gpu_device"]) not in gpu_identifiers or int(data["ram"]) <= 0 or int(data["ram"]) > total_ram:
+    error=False
+
+    if data["gpu_device"] is not None:
+        if int(data["gpu_device"]) not in gpu_identifiers:
+            error=True
+
+    if int(data["cpu_threads"]) > os.cpu_count() or int(data["cpu_threads"]) <= 0 or int(data["ram"]) <= 0 or int(data["ram"]) > total_ram or error:
         fail("Los recursos especificados son inválidos, compruebe la configuración")
         return
 

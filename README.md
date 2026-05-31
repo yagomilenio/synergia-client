@@ -56,7 +56,7 @@ Instalar `perf`:
 
 ## Configuración del cliente
 
-### `worker/container/config.ini`
+### `~/.config/synergia/config.ini`
 
 Contiene las URLs de conexión al servidor Synergia. Debe modificarse para apuntar a la instancia del servidor que se quiera usar (ngrok, dominio propio, IP pública, etc.):
 

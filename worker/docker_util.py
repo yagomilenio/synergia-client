@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 PARA USAR ESTA UTILIDAD HAY QUE INSTALAR Y TENER EN EL PATH DOCKER
 """
 
-DOCKER_IMAGE = "debian:12"
+CONFIG_PATH = BASE_DIR / "client" / "config.ini"
 
 _console = Console()
 
@@ -82,6 +82,7 @@ def start_docker(image="task-worker:latest", name="worker", cpu_threads=None, ra
     if gpu_id is not None:
         cmd += ["--gpus", f"device={gpu_id}"]
 
+    cmd += ["-v", f"{CONFIG_PATH.resolve()}:/scripts/config.ini:ro"]
     cmd.append(image)
     cmd.append("bash")  # ejecuta bash en background
 
