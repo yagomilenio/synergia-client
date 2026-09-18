@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 PARA USAR ESTA UTILIDAD HAY QUE INSTALAR Y TENER EN EL PATH DOCKER
 """
 
-CONFIG_PATH = BASE_DIR / "client" / "config.ini"
+CONFIG_PATH = Path("~/.config/synergia/config.ini").expanduser()
 
 _console = Console()
 
