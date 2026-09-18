@@ -1,1 +1,3 @@
 include client/config.ini.example
+include worker/Dockerfile
+recursive-include worker/container *

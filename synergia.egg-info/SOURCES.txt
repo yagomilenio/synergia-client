@@ -13,11 +13,15 @@ synergia.egg-info/dependency_links.txt
 synergia.egg-info/entry_points.txt
 synergia.egg-info/requires.txt
 synergia.egg-info/top_level.txt
+worker/Dockerfile
 worker/__init__.py
 worker/docker_util.py
 worker/worker.py
+worker/container/curl_wrapper.c
 worker/container/hash_util.py
+worker/container/iptables.sh
 worker/container/upload_results.py
+worker/container/wget_wrapper.c
 worker/utils/configuration_interpreter.py
 worker/utils/github_util.py
 worker/utils/logger.py
