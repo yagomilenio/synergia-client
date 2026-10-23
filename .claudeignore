@@ -1,0 +1,43 @@
+# Control de versiones
+.git/
+
+# Secretos y estado local (no leer ni mostrar)
+.env
+**/.env
+.cn_profile.json
+.cn_device.json
+client/config.ini
+worker/container/config.ini
+
+# Entornos
+venv/
+env/
+.venv/
+
+# Compilados, cachés y artefactos de empaquetado
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.o
+*.so
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Datos generados (resultados descargados con output-task --download)
+*.zip
+*.tar.gz
+[0-9]*/
+
+# Dependencias fijadas (duplicadas en pyproject.toml)
+requirements.txt
+
+# Licencia
+LICENSE
